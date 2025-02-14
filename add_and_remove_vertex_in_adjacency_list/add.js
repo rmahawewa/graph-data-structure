@@ -41,3 +41,28 @@ printGraph() {
     }
 }
 
+//Function to delete a vertex
+delVertex(k) {
+    //Iterate through all the vertices of the graph
+    for(let i = 0; i<this.v; ++i){
+        let curr = this.graph[i];
+        let prev = null;
+
+        if(i===k){
+            this.graph[i] = null;
+        }else{
+            while(curr !== null){
+                if(curr.vertex === k){
+                    if(prev === null){
+                        this.graph[i] = curr.next;
+                    }else{
+                        prev.next = curr.next;
+                    }
+                    break;
+                }
+                prev = curr;
+                curr = curr.next;
+            }
+        }
+    }
+}
