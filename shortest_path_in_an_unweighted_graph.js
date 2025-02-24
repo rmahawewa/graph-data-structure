@@ -64,4 +64,4 @@ class ShortestPathBFS{
     
 }
 
-ShortestPathBFS.main();
+ShortestPathBFS.main(); // execute 
